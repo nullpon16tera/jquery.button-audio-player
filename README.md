@@ -1,14 +1,14 @@
 ## ダウンロード
-GitHub
+[GitHub](https://github.com/nullpon16tera/jquery.button-audio-player)
 
 ## 利用方法
 ### CSS
-```
+```html
 <link rel="stylesheet" href="./path/to/jquery.button-audio-player.css">
 ```
 
 ### JavaScript
-```
+```html
 <script src="./path/to/jquery.button-audio-player.js"></script>
 ```
 上記CSSとJSファイルを設置したら、以下のコードを記述します。
