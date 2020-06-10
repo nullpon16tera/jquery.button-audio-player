@@ -1,13 +1,12 @@
 {
-	"name": "button-audio-player",
-	"version": "1.0.0",
-	"description": "One Button simple audio player",
-	"scripts": {
-		"dev": "NODE_ENV=development gulp build",
-		"watch": "NODE_ENV=development gulp",
-		"prod": "NODE_ENV=production  gulp build"
+  "name": "jquery.button-audio-player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+		"jquery": "^3.4.1"
 	},
-	"devDependencies": {
+  "devDependencies": {
 		"@babel/core": "^7.8.4",
 		"@babel/preset-env": "^7.8.4",
 		"babel-loader": "^8.0.6",
@@ -35,7 +34,20 @@
 		"webpack-cli": "^3.3.11",
 		"webpack-stream": "^5.2.1"
 	},
-	"dependencies": {
-		"jquery": "^3.4.1"
-	}
+  "scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "NODE_ENV=development gulp build",
+		"watch": "NODE_ENV=development gulp",
+		"prod": "NODE_ENV=production  gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nullpon16tera/jquery.button-audio-player.git"
+  },
+  "author": "nullpon16tera <nukoboku@gmail.com> (https://github.com/nullpon16tera)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nullpon16tera/jquery.button-audio-player/issues"
+  },
+  "homepage": "https://github.com/nullpon16tera/jquery.button-audio-player#readme"
 }
