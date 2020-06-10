@@ -38,5 +38,6 @@ GitHub
 
 ### オプション
 | Key | Default | Description |
+| ------------- | ------------- | ------------- |
 | type | default | (String) 設定は以下の通り。default、bar-animation |
 | src | - | (String) MP3 ファイルまでのPATHまたは、URLを記述 |
