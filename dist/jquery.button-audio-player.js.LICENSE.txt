@@ -1,0 +1,75 @@
+/* 0 */
+
+/* harmony default export */
+
+/************************************************************************/
+
+/******/
+
+/***/
+
+//     id: this.option.element
+
+//   this.$elem = $('<div/>', {
+
+//   this.$elem.prependTo('body');
+
+//   });
+
+// CONCATENATED MODULE: ./src/js/_btn-bar-animation.js
+
+// CONCATENATED MODULE: ./src/js/_btn-default.js
+
+// CONCATENATED MODULE: ./src/js/jquery.button-audio-player.js
+
+// Check if module is in cache
+
+// Create a new module (and put it into the cache)
+
+// ESM COMPAT FLAG
+
+// Execute the module function
+
+// Flag the module as loaded
+
+// Load entry module and return exports
+
+// Object.prototype.hasOwnProperty.call
+
+// Return the exports of the module
+
+// The module cache
+
+// The require function
+
+// __webpack_public_path__
+
+// create a fake namespace object
+
+// define __esModule on exports
+
+// define getter function for harmony exports
+
+// expose the module cache
+
+// expose the modules object (__webpack_modules__)
+
+// getDefaultExport function for compatibility with non-harmony modules
+
+// if (this.$elem.length === 0) {
+
+// mode & 1: value is a module id, require it
+
+// mode & 2: merge all properties of value into the ns
+
+// mode & 4: return value when already ns object
+
+// mode & 8|1: behave like require
+
+// this.$elem = elem;
+
+// webpackBootstrap
+
+// window.buttonAudioPlayer = buttonAudioPlayer;
+
+// }

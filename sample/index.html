@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>jQuery Button Audio Player</title>
+	<link rel="stylesheet" href="./reboot.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism.min.css" integrity="sha256-cuvic28gVvjQIo3Q4hnRpQSNB0aMw3C+kjkR0i+hrWg=" crossorigin="anonymous" />
+	<link rel="stylesheet" href="./assets/css/jquery.button-audio-player.css">
+<style>
+@media (max-width: 640px) {
+	#bapRender {
+		position: fixed;
+		right: 16px;
+		bottom: 30px;
+	}
+}
+@media (min-width: 641px) {
+	#bapRender {
+		margin-left: auto;
+	}
+}
+</style>
+</head>
+<body>
+<div id="wrapper" class="wrapper">
+	<header class="header">
+		<h1 class="header-title">jQuery Button Audio Player</h1>
+		<!-- 好きな位置にタグを入れて利用します。 -->
+		<div id="bapRender"></div>
+	</header>
+	<main id="main">
+		<div class="contents">
+			<div class="container">
+				<h2>ダウンロード</h2>
+				<p><a href="#" target="_blank">GitHub</a></p>
+				<h2>利用方法</h2>
+				<h3>CSS</h3>
+				<p></p>
+<pre>
+<code class="language-html">
+&lt;link rel="stylesheet" href="./path/to/jquery.button-audio-player.css"&gt;
+</code>
+</pre>
+				<h3>JavaScript</h3>
+<pre>
+<code class="language-js">
+&lt;script src="./path/to/jquery.button-audio-player.js"&gt;&lt;/script&gt;
+</code>
+</pre>
+				<p>上記CSSとJSファイルを設置したら、以下のコードを記述します。</p>
+				<p>&nbsp;</p>
+				<h3>コードの記述</h3>
+<pre>
+<code class="language-js">
+&lt;script&gt;
+(function($) {
+  $('#bapRender').buttonAudioPlayer({
+    type: 'default',
+    src: 'path/to/example.mp3'
+  });
+})(jQuery);
+&lt;/script&gt;
+</code>
+</pre>
+				<p>&nbsp;</p>
+				<p>見た目は、以下の2種類</p>
+				<p>
+					<span style="display:inline-block; text-align: center;">
+						<button type="button" class="bap-btn bap-btn-default bap-deactive"><div class="bap-icon"><div class="bap-icon-off"><svg id="bapIconSoundOff" x="0px" y="0px" viewBox="0 0 54 54" enable-background="new 0 0 54 54" xml:space="preserve"><path d="M46.4,26l7.3-7.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0L45,24.6l-7.3-7.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l7.3,7.3l-7.3,7.3 c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7.3-7.3l7.3,7.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L46.4,26z"></path><path d="M28.4,4.4c-1-0.6-2.1-0.5-3.1,0c0,0-0.1,0.1-0.1,0.1L11.6,16H1c-0.6,0-1,0.4-1,1v19c0,0.3,0.1,0.5,0.3,0.7S0.7,37,1,37 l10.6,0l13.5,12.4c0,0,0.1,0.1,0.2,0.1c0.5,0.3,1,0.4,1.6,0.4c0.5,0,1-0.1,1.5-0.4c1-0.6,1.6-1.6,1.6-2.8V7.2C30,6,29.4,5,28.4,4.4 z M28,46.8c0,0.4-0.2,0.8-0.6,1c-0.2,0.1-0.5,0.3-1,0L13,35.6V31c0-0.6-0.4-1-1-1s-1,0.4-1,1v4l-9,0V18h9v4c0,0.6,0.4,1,1,1 s1-0.4,1-1v-4.5L26.4,6.1c0.5-0.2,0.9-0.1,1,0c0.4,0.2,0.6,0.6,0.6,1V46.8z"></path></svg></div></div><div class="bap-onoff-text"><span>OFF</span></div></button><br>
+						default
+					</span>　
+					<span style="display:inline-block; text-align: center;">
+						<button type="button" class="bap-btn bap-btn-bar-animation bap-deactive"><div class="bap-bars"><span class="bap-bar" data-bap-bar="1"></span><span class="bap-bar" data-bap-bar="2"></span><span class="bap-bar" data-bap-bar="3"></span><span class="bap-bar" data-bap-bar="4"></span><span class="bap-bar" data-bap-bar="5"></span></div></button><br>
+						bar-animation
+					</span>
+				</p>
+				<p>&nbsp;</p>
+				<h2>オプション</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Key</th>
+							<th>Default</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>type</th>
+							<th>default</th>
+							<td>(String) 設定は以下の通り。<br><code>default</code>、<code>bar-animation</code></td>
+						</tr>
+						<tr>
+							<th>src</th>
+							<th></th>
+							<td>(String) MP3 ファイルまでのPATHまたは、URLを記述</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>&nbsp;</p>
+				<h2>お借りしたもの</h2>
+				<p>サンプルで利用しているmp3データは、以下の通りです。</p>
+				<blockquote>
+					<p>Track: Robin Hustin x TobiMorrow - Light It Up (feat. Jex) [NCS Release]<br>
+					Music provided by NoCopyrightSounds.<br>
+					Watch: <a href="https://youtu.be/bdE_SyHad90" target="_blank">https://youtu.be/bdE_SyHad90</a><br>
+					Free Download / Stream: <a href="http://ncs.io/LightitupYO" target="_blank">http://ncs.io/LightitupYO</a></p>
+				</blockquote>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<p class="copyright">Copyright Button-Audio-Player All Rights Reserved.</p>
+	</footer>
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/components/prism-core.min.js" integrity="sha256-9h14mWYYiQGkeAKg2JtijbqApb56kgw57WN6sI6dwH0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/plugins/autoloader/prism-autoloader.min.js" integrity="sha256-3S2PESHNt0YNL65z57WuHPHIv12fibpBDXepyCGHftw=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="./assets/js/jquery.button-audio-player.js"></script>
+<script>
+(function($) {
+	$('#bapRender').buttonAudioPlayer({
+		type: 'default',
+		src: 'https://www.dropbox.com/s/z82oforvo77yw93/Robin%20Hustin%20x%20Tobimorrow%20-%20Light%20It%20Up%20%28feat.%20Jex%29%20V2.mp3?dl=1'
+	});
+})(jQuery);
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+*.gem
+.bundle
+.sass-cache
+_site
+node_modules/
+resource/assets/
+# Gemfile.lock
+package-lock.json
+composer.lock

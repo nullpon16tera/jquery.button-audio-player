@@ -1,0 +1,45 @@
+.bap-btn-default {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+	.bap-icon {
+		display: block;
+		width: 24px;
+    height: 20px;
+    margin: 0 auto 4px;
+		padding: 0 1px;
+    line-height: 1;
+
+		svg {
+      display: block;
+			width: auto;
+      height: 15px;
+      margin: 0 auto;
+			fill: currentColor;
+
+			@media (min-width: $md-min) {
+				height: 20px;
+			}
+		}
+  }
+  .bap-icon-on,
+  .bap-icon-off {
+    display: block;
+  }
+
+	.bap-onoff-text {
+		line-height: 1;
+    font-size: 10px;
+    text-indent: 2px;
+		letter-spacing: 2px;
+	}
+}

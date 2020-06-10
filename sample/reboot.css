@@ -1,0 +1,167 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 65.75%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  /* color: #153557; */
+  background-color: #fff;
+}
+
+header,
+footer,
+main {
+  display: block;
+  width: 100%;
+  padding: 16px;
+}
+
+a:link {
+  color: #1258bd;
+}
+a:visited {
+  color: #c228cd;
+}
+a:hover {
+  color: #12f8ad;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* background-color: #48aaa8; */
+}
+
+main {
+  flex: 1 0 0%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .2);
+}
+.header-title {
+  margin: 0;
+  line-height: 1.2;
+}
+@media (max-width: 640px) {
+  .header-title {
+    font-size: 18px;
+  }
+}
+.contents {
+  padding: 40px 0;
+}
+@media (min-width: 641px) {
+  .contents {
+    padding: 60px 0;
+  }
+}
+.footer {
+  /* color: #eee; */
+  /* background-color: #499a9a; */
+}
+.copyright {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.container {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 575px) {
+  .container {
+    max-width: 600px;
+  }
+}
+@media (min-width: 769px) {
+  .container {
+    max-width: 780px;
+  }
+}
+@media (min-width: 921px) {
+  .container {
+    max-width: 875px;
+  }
+}
+@media (min-width: 1025px) {
+  .container {
+    max-width: 920px;
+  }
+}
+@media (min-width: 1181px) {
+  .container {
+    max-width: 1040px;
+  }
+}
+
+.mwppa-btn {
+  position: fixed;
+}
+
+.contens h1 {
+
+}
+code {
+  background-color: #e0f0e6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+}
+table thead {
+  background-color: #e0e0e0;
+}
+table thead th,
+table tbody th,
+table tbody td {
+  padding: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+table thead th + th {
+  border-left: 1px solid #fff;
+}
+table tbody th + th,
+table tbody th + td,
+table tbody td + td {
+  border-left: 1px solid #e0e0e0;
+}
+
+blockquote {
+  padding: 16px 20px;
+  font-size: 90%;
+  color: #666;
+  background-color: #f0f0f0;
+  border-left: 5px solid #347888;
+  box-shadow: 3px 3px 6px 0 rgba(150, 150, 150, .3);
+}
+p:first-child {
+  margin-top: 0;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+

@@ -1,0 +1,35 @@
+/**
+ * jQuery Button Audio Player
+ * 1つのボタンで音声を再生できるようにするプラグイン
+ * デザインパターンは2種類
+ *
+ * @package jQuery
+ * @since 1.0
+ */
+
+@import 'variables';
+
+.bap-btn {
+	appearance: none;
+	cursor: pointer;
+	user-select: none;
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	vertical-align: middle;
+	outline: 0;
+	border: 0;
+  border-radius: 100px;
+  transition: 235ms ease;
+
+	@media (min-width: $md-min) {
+		width: 48px;
+		height: 48px;
+	}
+}
+
+@import 'btn-default';
+@import 'bar-animation';
