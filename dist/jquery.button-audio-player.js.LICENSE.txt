@@ -8,14 +8,6 @@
 
 /***/
 
-//     id: this.option.element
-
-//   this.$elem = $('<div/>', {
-
-//   this.$elem.prependTo('body');
-
-//   });
-
 // CONCATENATED MODULE: ./src/js/_btn-bar-animation.js
 
 // CONCATENATED MODULE: ./src/js/_btn-default.js
@@ -56,8 +48,6 @@
 
 // getDefaultExport function for compatibility with non-harmony modules
 
-// if (this.$elem.length === 0) {
-
 // mode & 1: value is a module id, require it
 
 // mode & 2: merge all properties of value into the ns
@@ -69,7 +59,3 @@
 // this.$elem = elem;
 
 // webpackBootstrap
-
-// window.buttonAudioPlayer = buttonAudioPlayer;
-
-// }

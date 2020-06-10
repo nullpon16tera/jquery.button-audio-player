@@ -221,30 +221,44 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+if (typeof jQuery !== 'undefined') {
+  window.$ = jQuery;
+}
+
 var buttonAudioPlayer = function buttonAudioPlayer(options) {
   var defaults = {
+    el: '#bapRender',
     src: null,
     type: 'default'
   };
   this.option = $.extend(true, defaults, options);
-  this.$elem = $(this);
-  this.audio = false;
+  var self = this;
+  var elem = this;
 
-  if (this.option.src) {
-    this.audio = new Audio(this.option.src);
-    this.audio.loop = true;
+  if (typeof elem.length === 'undefined') {
+    elem = $(this.option.el);
   }
 
-  if (this.option.type === 'bar-animation') {
-    var btnBarAnimation = new _btn_bar_animation_js__WEBPACK_IMPORTED_MODULE_1__["default"](this.audio);
-    btnBarAnimation.init(this.$elem);
-  } else {
-    var btnDefault = new _btn_default_js__WEBPACK_IMPORTED_MODULE_0__["default"](this.audio);
-    btnDefault.init(this.$elem);
-  }
-}; // window.buttonAudioPlayer = buttonAudioPlayer;
+  return elem.each(function () {
+    this.$elem = $(this);
+    this.audio = false;
 
+    if (self.option.src) {
+      this.audio = new Audio(self.option.src);
+      this.audio.loop = true;
+    }
 
+    if (self.option.type === 'bar-animation') {
+      var btnBarAnimation = new _btn_bar_animation_js__WEBPACK_IMPORTED_MODULE_1__["default"](this.audio);
+      btnBarAnimation.init(this.$elem);
+    } else {
+      var btnDefault = new _btn_default_js__WEBPACK_IMPORTED_MODULE_0__["default"](this.audio);
+      btnDefault.init(this.$elem);
+    }
+  });
+};
+
+window.buttonAudioPlayer = buttonAudioPlayer;
 $.fn.buttonAudioPlayer = buttonAudioPlayer;
 
 /***/ })

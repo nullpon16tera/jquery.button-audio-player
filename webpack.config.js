@@ -6,7 +6,8 @@ process.noDeprecation = true;
 
 module.exports = {
   entry: {
-    'jquery.button-audio-player': path.resolve(__dirname, "src/js/jquery.button-audio-player.js")
+    'jquery.button-audio-player': path.resolve(__dirname, "src/js/jquery.button-audio-player.js"),
+    'test': path.resolve(__dirname, "src/js/test.js")
   },
   output: {
     filename: "[name].js",

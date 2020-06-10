@@ -37,6 +37,12 @@
 			<div class="container">
 				<h2>ダウンロード</h2>
 				<p><a href="https://github.com/nullpon16tera/jquery.button-audio-player" target="_blank">GitHub</a></p>
+				<h3>NPM</h3>
+<pre>
+<code class="language-bash">
+$ npm install jquery.button-audio-player
+</code>
+</pre>
 				<h2>利用方法</h2>
 				<h3>CSS</h3>
 				<p></p>
@@ -67,6 +73,28 @@
 </code>
 </pre>
 				<p>&nbsp;</p>
+
+				<h2>NPMでインストールした場合の利用方法</h2>
+				<h3>SCSS</h3>
+<pre>
+<code class="language-css">
+@import '~jquery.button-audio-player/dist/jquery.button-audio-player.css';
+</code>
+</pre>
+				<h3>JavaScript (webpackなど)</h3>
+<pre>
+<code class="language-js">
+import $ from 'jquery';
+window.jQuery = $;
+import 'jquery.button-audio-player';
+
+var bap = new buttonAudioPlayer({
+  el: '#bapRender', // {ID or Class Name}
+  type: 'default',
+  src: 'path/to/mp3 file or file url'
+});
+</code>
+</pre>
 				<p>見た目は、以下の2種類</p>
 				<p>
 					<span style="display:inline-block; text-align: center;">

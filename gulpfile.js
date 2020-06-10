@@ -164,5 +164,5 @@ function watchFiles(done) {
 
 exports.sassBuild = task(sassBuild)
 exports.jsBuild = task(jsBuild)
-exports.build = series(clean, parallel(sassBuild, jsBuild))
-exports.default = series(clean, parallel(sassBuild, jsBuild), series(bsInit, watchFiles))
+exports.build = series(parallel(sassBuild, jsBuild))
+exports.default = series(parallel(sassBuild, jsBuild), series(bsInit, watchFiles))
