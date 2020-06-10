@@ -2,7 +2,7 @@
   "name": "jquery.button-audio-player",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "src/js/jquery.button-audio-player.js",
   "dependencies": {
 		"jquery": "^3.4.1"
 	},
