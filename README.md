@@ -1,6 +1,9 @@
 ## ダウンロード
 [GitHub](https://github.com/nullpon16tera/jquery.button-audio-player)
 
+## サンプル
+[利用方法やサンプルページ](https://nullpon16tera.github.io/jquery.button-audio-player/sample/)
+
 ## 利用方法
 ### CSS
 ```html
