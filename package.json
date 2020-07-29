@@ -1,6 +1,6 @@
 {
 		"name": "jquery.button-audio-player",
-		"version": "1.0.2",
+		"version": "1.0.3",
 		"description": "",
 		"main": "src/js/jquery.button-audio-player.js",
 		"dependencies": {
