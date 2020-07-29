@@ -71,3 +71,6 @@ var bap = new buttonAudioPlayer({
 | ------------- | ------------- | ------------- |
 | type | default | (String) 設定は以下の通り。default、bar-animation |
 | src | - | (String) MP3 ファイルまでのPATHまたは、URLを記述 |
+| loop | true | (Boolen) ループするかしないか。下にあるloopStart、loopEndが設定されている場合は、こちらの設定はスルーされる |
+| loopStart | false | (Numeric) ループ時のスタート地点の秒数 1/sec |
+| loopEnd | false | (Numeric) ループさせるための終端地点の秒数 1/sec |

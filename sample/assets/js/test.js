@@ -11102,6 +11102,9 @@ buttonDefault.prototype = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _btn_default_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_btn-default.js */ "./src/js/_btn-default.js");
 /* harmony import */ var _btn_bar_animation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_btn-bar-animation.js */ "./src/js/_btn-bar-animation.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 
@@ -11113,7 +11116,10 @@ var buttonAudioPlayer = function buttonAudioPlayer(options) {
   var defaults = {
     el: '#bapRender',
     src: null,
-    type: 'default'
+    type: 'default',
+    loop: true,
+    loopStart: false,
+    loopEnd: false
   };
   this.option = $.extend(true, defaults, options);
   var self = this;
@@ -11129,7 +11135,7 @@ var buttonAudioPlayer = function buttonAudioPlayer(options) {
 
     if (self.option.src) {
       this.audio = new Audio(self.option.src);
-      this.audio.loop = true;
+      this.audio.loop = self.option.loop;
     }
 
     if (self.option.type === 'bar-animation') {
@@ -11139,6 +11145,15 @@ var buttonAudioPlayer = function buttonAudioPlayer(options) {
       var btnDefault = new _btn_default_js__WEBPACK_IMPORTED_MODULE_0__["default"](this.audio);
       btnDefault.init(this.$elem);
     }
+
+    this.audio.addEventListener('timeupdate', function () {
+      // console.log(this.currentTime);
+      if (Object(jquery__WEBPACK_IMPORTED_MODULE_2__["isNumeric"])(self.option.loopStart) && Object(jquery__WEBPACK_IMPORTED_MODULE_2__["isNumeric"])(self.option.loopEnd)) {
+        if (self.option.loopEnd < this.currentTime) {
+          this.currentTime = self.option.loopStart;
+        }
+      }
+    }, false);
   });
 };
 

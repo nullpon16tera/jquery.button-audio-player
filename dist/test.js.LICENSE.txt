@@ -976,6 +976,8 @@
 
 // ESM COMPAT FLAG
 
+// EXTERNAL MODULE: ./node_modules/jquery/dist/jquery.js
+
 // Early iOS 10 versions support `attachShadow` but not `getRootNode`,
 
 // Easily-parseable/retrievable ID or TAG or CLASS selectors
@@ -2757,6 +2759,8 @@
 // collapse sibling forms: the second one becomes a child of the first one.
 
 // complex values such as "rotate(1rad)" are returned as-is.
+
+// console.log(this.currentTime);
 
 // context (optional): If specified, the fragment will be created in this context,
 

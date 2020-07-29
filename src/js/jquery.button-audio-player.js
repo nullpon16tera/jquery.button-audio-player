@@ -1,5 +1,6 @@
 import buttonDefault from './_btn-default.js';
 import buttonBarAnimation from './_btn-bar-animation.js';
+import { isNumeric } from 'jquery';
 
 if (typeof jQuery !== 'undefined') {
   window.$ = jQuery;
@@ -10,6 +11,9 @@ var buttonAudioPlayer = function (options) {
     el: '#bapRender',
     src: null,
     type: 'default',
+    loop: true,
+    loopStart: false,
+    loopEnd: false
   };
   this.option = $.extend(true, defaults, options);
 
@@ -28,7 +32,7 @@ var buttonAudioPlayer = function (options) {
 
     if (self.option.src) {
       this.audio = new Audio(self.option.src);
-      this.audio.loop = true;
+      this.audio.loop = self.option.loop;
     }
 
     if (self.option.type === 'bar-animation') {
@@ -38,6 +42,15 @@ var buttonAudioPlayer = function (options) {
       var btnDefault = new buttonDefault(this.audio);
       btnDefault.init(this.$elem);
     }
+
+    this.audio.addEventListener('timeupdate', function () {
+      // console.log(this.currentTime);
+      if (isNumeric(self.option.loopStart) && isNumeric(self.option.loopEnd)) {
+        if (self.option.loopEnd < this.currentTime) {
+          this.currentTime = self.option.loopStart;
+        }
+      }
+    }, false);
   });
 }
 

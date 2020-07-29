@@ -137,6 +137,21 @@ var bap = new buttonAudioPlayer({
 							<th></th>
 							<td>(String) MP3 ファイルまでのPATHまたは、URLを記述</td>
 						</tr>
+						<tr>
+							<th>loop</th>
+							<th>true</th>
+							<td>(Boolen) ループするかしないか。下にあるloopStart、loopEndが設定されている場合は、こちらの設定はスルーされる</td>
+						</tr>
+						<tr>
+							<th>loopStart</th>
+							<th>false</th>
+							<td>(Numeric) ループ時のスタート地点の秒数 1/sec</td>
+						</tr>
+						<tr>
+							<th>loopEnd</th>
+							<th>false</th>
+							<td>(Numeric) ループさせるための終端地点の秒数 1/sec</td>
+						</tr>
 					</tbody>
 				</table>
 				<p>&nbsp;</p>
@@ -166,7 +181,7 @@ var bap = new buttonAudioPlayer({
 (function($) {
 	$('#bapRender').buttonAudioPlayer({
 		type: 'default',
-		src: 'https://www.dropbox.com/s/z82oforvo77yw93/Robin%20Hustin%20x%20Tobimorrow%20-%20Light%20It%20Up%20%28feat.%20Jex%29%20V2.mp3?dl=1'
+		src: 'https://www.dropbox.com/s/z82oforvo77yw93/Robin%20Hustin%20x%20Tobimorrow%20-%20Light%20It%20Up%20%28feat.%20Jex%29%20V2.mp3?dl=1',
 	});
 })(jQuery);
 </script>
